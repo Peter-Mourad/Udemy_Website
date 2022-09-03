@@ -21,6 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
+src/setupTests.js
+public/manifest.json
+public/robots.txt
+src/index.css
+src/reportWebVitals.js
 .gitignore
-package-lock.json
+src/setupTests.js
