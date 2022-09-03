@@ -1,0 +1,189 @@
+{
+    "Courses": {
+        "Python": [
+            {
+                "id": "0",
+                "title": "Learn Python: The Complete Python Programming Course",
+                "author": "Avinash Jain",
+                "image": "https://img-b.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
+                "link": "https://www.udemy.com/course/pythonforbeginners/",
+                "rate": 3.3,
+                "price": "679.99"
+            },
+            {
+                "id": "1",
+                "title": "Learning Python for Data Analysis and Visualization",
+                "author": "Jose Portilla",
+                "image": "https://img-b.udemycdn.com/course/240x135/396876_cc92_7.jpg",
+                "link": "https://www.udemy.com/course/learning-python-for-data-analysis-and-visualization/",
+                "rate": 4.3,
+                "price": "1599.99"
+            },
+            {
+                "id": "2",
+                "title": "Python for Beginners - Learn Programming from scratch",
+                "author": "Edwin Diaz",
+                "image": "https://img-b.udemycdn.com/course/240x135/405878_e5a0_3.jpg",
+                "link": "https://www.udemy.com/course/python-for-beginners-learn-programming-from-scratch/",
+                "rate": 4.4,
+                "price": "679.99"
+            },
+            {
+                "id": "3",
+                "title": "Learn Python: Python for Beginners",
+                "author": "Abrar Hussain",
+                "image": "https://img-b.udemycdn.com/course/480x270/426570_1b91_3.jpg",
+                "link": "https://www.udemy.com/course/learn-python/",
+                "rate": 4.3,
+                "price": "319.99"
+            },
+            {
+                "id": "4",
+                "title": "Python Beyond the Basics - Object-Oriented Programming",
+                "author": "Infinite Skills",
+                "image": "https://img-b.udemycdn.com/course/480x270/449532_2aa9_7.jpg",
+                "link": "https://www.udemy.com/course/python-beyond-the-basics-object-oriented-programming/",
+                "rate": 4.3,
+                "price": "269.99"
+            },
+            {
+                "id": "5",
+                "title": "Python  & Selenium WebDriver QA Automation 2022",
+                "author": "Admas Kinfu",
+                "image": "https://img-c.udemycdn.com/course/240x135/482754_7146_6.jpg",
+                "link": "https://www.udemy.com/course/selenium-webdriver-and-python/",
+                "rate": 4.6,
+                "price": "1299.99"
+            },
+            {
+                "id": "6",
+                "title": "2Python From Scratch & Selenium WebDriver QA Automation 2022",
+                "author": "Admas Kinfu",
+                "image": "https://img-c.udemycdn.com/course/240x135/482754_7146_6.jpg",
+                "link": "https://www.udemy.com/course/selenium-webdriver-and-python/",
+                "rate": 4.6,
+                "price": "1299.99"
+            },
+            {
+                "id": "5",
+                "title": "3Python From Scratch & Selenium WebDriver QA Automation 2022",
+                "author": "Admas Kinfu",
+                "image": "https://img-c.udemycdn.com/course/240x135/482754_7146_6.jpg",
+                "link": "https://www.udemy.com/course/selenium-webdriver-and-python/",
+                "rate": 4.6,
+                "price": "1299.99"
+            },
+            {
+                "id": "5",
+                "title": "4Python From Scratch & Selenium WebDriver QA Automation 2022",
+                "author": "Admas Kinfu",
+                "image": "https://img-c.udemycdn.com/course/240x135/482754_7146_6.jpg",
+                "link": "https://www.udemy.com/course/selenium-webdriver-and-python/",
+                "rate": 4.6,
+                "price": "1299.99"
+            },
+            {
+                "id": "5",
+                "title": "5Python From Scratch & Selenium WebDriver QA Automation 2022",
+                "author": "Admas Kinfu",
+                "image": "https://img-c.udemycdn.com/course/240x135/482754_7146_6.jpg",
+                "link": "https://www.udemy.com/course/selenium-webdriver-and-python/",
+                "rate": 4.6,
+                "price": "1299.99"
+            },
+            {
+                "id": "5",
+                "title": "6Python From Scratch & Selenium WebDriver QA Automation 2022",
+                "author": "Admas Kinfu",
+                "image": "https://img-c.udemycdn.com/course/240x135/482754_7146_6.jpg",
+                "link": "https://www.udemy.com/course/selenium-webdriver-and-python/",
+                "rate": 4.6,
+                "price": "1299.99"
+            },
+            {
+                "id": "5",
+                "title": "7Python From Scratch & Selenium WebDriver QA Automation 2022",
+                "author": "Admas Kinfu",
+                "image": "https://img-c.udemycdn.com/course/240x135/482754_7146_6.jpg",
+                "link": "https://www.udemy.com/course/selenium-webdriver-and-python/",
+                "rate": 4.6,
+                "price": "1299.99"
+            },
+            {
+                "id": "5",
+                "title": "8Python From Scratch & Selenium WebDriver QA Automation 2022",
+                "author": "Admas Kinfu",
+                "image": "https://img-b.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
+                "link": "https://www.udemy.com/course/selenium-webdriver-and-python/",
+                "rate": 4.6,
+                "price": "1299.99"
+            }
+        ],
+        "Excel": [
+            {
+                "id": "0",
+                "title": "Learn Excel",
+                "author": "Avinash Jain",
+                "image": "https://img-b.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
+                "link": "https://www.udemy.com/course/pythonforbeginners/",
+                "rate": 3.3,
+                "price": "679.99"
+            }
+        ],
+        "Web_Development": [
+            {
+                "id": "0",
+                "title": "Learn Web-Development",
+                "author": "Avinash Jain",
+                "image": "https://img-b.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
+                "link": "https://www.udemy.com/course/pythonforbeginners/",
+                "rate": 3.3,
+                "price": "679.99"
+            }
+        ],
+        "JavaScript": [
+            {
+                "id": "0",
+                "title": "Learn JavaScript in 5 mins.",
+                "author": "Avinash Jain",
+                "image": "https://img-b.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
+                "link": "https://www.udemy.com/course/pythonforbeginners/",
+                "rate": 3.3,
+                "price": "679.99"
+            }
+        ],
+        "Data_Science": [
+            {
+                "id": "0",
+                "title": "Learn Data-science!",
+                "author": "Avinash Jain",
+                "image": "https://img-b.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
+                "link": "https://www.udemy.com/course/pythonforbeginners/",
+                "rate": 3.3,
+                "price": "679.99"
+            }
+        ],
+        "AWS_Certification": [
+            {
+                "id": "0",
+                "title": "Learn AWS",
+                "author": "Avinash Jain",
+                "image": "https://img-b.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
+                "link": "https://www.udemy.com/course/pythonforbeginners/",
+                "rate": 3.3,
+                "price": "679.99"
+            }
+        ],
+        "Drawing": [
+            {
+                "id": "0",
+                "title": "Learn Drawing",
+                "author": "Avinash Jain",
+                "image": "https://img-b.udemycdn.com/course/240x135/394676_ce3d_5.jpg",
+                "link": "https://www.udemy.com/course/pythonforbeginners/",
+                "rate": 3.3,
+                "price": "679.99"
+            }
+        ]
+    }
+}
