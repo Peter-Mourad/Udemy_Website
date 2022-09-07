@@ -1,0 +1,46 @@
+.top-container{
+    background-color: #1C1D1F;
+    color: white;
+    height: 300px;
+    padding-left: 20%;
+    padding-top: 20px;
+    font-size: smaller;
+    overflow: hidden;
+}
+
+a{
+    color: #CeC0FC;
+}
+
+.topic-menu > a{
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+.top-container > *{
+    margin: 0%;
+    width: 600px;
+}
+
+.top-container > .header > *{
+    padding-bottom: 8px;
+}
+
+.inline{
+    display: flex;
+    gap: 10px;
+}
+
+.inline > span > *{
+    padding-right: 10px;
+}
+
+.rate-section{
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.rate{
+    color: gold;
+}
