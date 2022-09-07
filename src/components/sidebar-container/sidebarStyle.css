@@ -1,0 +1,67 @@
+.sidebar-container{
+    border: 1px solid black;
+    width: 320px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-left: 65%;
+    margin-top: 25px;
+    background-color: white;
+}
+
+.sidebar-container :not(img){
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.sidebar-container > img{
+    width: 320px;
+    height: 180px;
+}
+
+.sidebar-container > button{
+    font-weight: bolder;
+    border: 1px solid black;
+    height: 50px;
+}
+
+.inverted-button{
+    background-color: rgb(167, 7, 167);
+    color: white;
+}
+
+.description{
+    font-size: 10px;
+    color: rgb(156, 150, 150);
+    text-align: center;
+}
+
+li, .content-group > p{
+    list-style: none;
+    font-size: 13px;
+}
+
+.options{
+    display: flex;  
+}
+
+.options > button{
+    font-weight: bolder;
+    margin: 0%;
+    padding-left: 0%;
+    padding-right: 20px;
+    text-decoration: underline;
+}
+
+.content-group{
+    padding-top: 5px;
+}
+
+.content-group > button{
+    border: 1px solid black;
+    font-weight: bolder;
+    height: 40px;
+    width: 100%;
+    margin: 0%;
+}
