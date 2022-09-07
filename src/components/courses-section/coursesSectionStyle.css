@@ -113,14 +113,7 @@ li.active > a{
     display: flex;
 }
 
-.fa{
-    color: gold;
-    padding-top: 3px;
-    align-items: center;
-}
-
 .rate{
-    padding-right: 10px;
     color: green;
     font-weight: bold;
 }
