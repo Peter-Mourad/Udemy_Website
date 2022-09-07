@@ -5,15 +5,20 @@ import menu from "../../media/menu.png";
 import cart from "../../media/shopping-cart.jpg";
 import world from "../../media/planetary-grid.png";
 
+import { Link } from "react-router-dom";
+
 function NavigationBar() {
     return (
         <div className="navigation-bar">
             <button className="hide1">
                 <img height="20px" width="20px" src = { menu } alt="menu"></img>
             </button>
-            <button>
-                <img height="80%" width="90%" src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="udemy-logo"></img>
-            </button>
+            
+            <Link to="/">
+                <button>
+                    <img height="50px" width="90%" src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="udemy-logo"></img>
+                </button>
+            </Link>
             <button className="hide2">categories</button>
             <form className="search-bar hide2">
                 <button id="search-button" type="submit">
