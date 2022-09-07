@@ -1,23 +1,23 @@
-import React from "react";
+import { Routes, Route } from "react-router-dom";
 
-import Header from "./components/header/Header";
-import NavigationBar from './components/navbar/NavigationBar';
-import CoursesSection from "./components/courses-section/CoursesSection";
+import Home from "./pages/Home";
+import SingleCourse from "./pages/SingleCourse";
+import { CoursesContextProvider } from "./contexts/coursesContext";
+
 import "./globalStyle.css";
-
-const courses = require('./db.json').Courses;
 
 function App() {
   return (
-    <>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <CoursesContextProvider>
       <div className="App">
-        <NavigationBar />
-        <Header />
-        <CoursesSection data={ courses.Python} />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/:courseID" element={<SingleCourse />} />
+        </Routes>
       </div>
-    </>
+    </CoursesContextProvider>
   );
-};
+}
 
 export default App;
