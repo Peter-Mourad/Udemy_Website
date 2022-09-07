@@ -10,6 +10,10 @@ button{
     background-color: transparent;
 }
 
+.fa-star, .fa-star-half-full, .fa-star-o{
+    color: gold;
+}
+
 input:focus {
     outline-width: 0;
 }
