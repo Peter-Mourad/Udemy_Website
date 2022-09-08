@@ -1,0 +1,45 @@
+.footer-section{
+    background-color: #1c1d1f;
+    height: 500px;
+    margin-top: 80px;
+}
+
+.footer-section > *{
+    padding-left: 50px;
+}
+
+.partners-section{
+    border-bottom: 1px solid rgb(84, 81, 81);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.partners-section-intro{
+    padding-top: 40px;
+    width: max-content;
+}
+
+.partners-section-intro > *{
+    font-weight: bolder;
+    padding-right: 5px;
+    font-size: 20px;
+}
+
+.partners-section-intro > span{
+    color: white;
+}
+
+.partners-logos{
+    display: flex;
+    gap: 10px;
+    padding-right: 20px;
+}
+
+.partners-logos > img{
+    height: 100%;
+    width: 80px;
+}
+
+
+
