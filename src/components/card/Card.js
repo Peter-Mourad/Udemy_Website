@@ -1,7 +1,7 @@
 import React from "react";
-
+    
 function RateHtmlFormatting(rate){
-    let html = `<span class="rate"><strong>${rate}</strong></span>\n`;
+    let html = `<span class="rate"><strong>${Math.round(rate * 10) / 10}</strong></span>\n`;
     for (let i = 0; i < 5; i++, rate--){
         if (rate >= 1) 
             html += `\t\t\t\t\t\t\t<i class="fa fa-star"></i>\n`;
@@ -13,26 +13,29 @@ function RateHtmlFormatting(rate){
     return html;
 }
 
-function Card({ data }) {
+
+const coursesData = require('../../db.json').courses_data.python_res.items;
+
+function Card() {
+
     const fill = (course) => {
         return (
             <div className="card-container">
                 <div className="course-item">
-                    <a href={course.link}>
-                        <img src={course.image} alt=""></img>
+                    <a href={`/course/${course.id}`}>
+                        <img src={course.image_125_H} alt=""></img>
                         <p><strong>{course.title}</strong></p>
-                        <p className="author">{course.author}</p>
                         <div className="rate-section"
-                            dangerouslySetInnerHTML={{ __html: RateHtmlFormatting(course.rate) }}
+                            dangerouslySetInnerHTML={{ __html: RateHtmlFormatting(course.rating) }}
                         >
                         </div>
-                        <p className="price">E£${course.price}</p>
+                        <p className="price">E£$699</p>
                     </a>
                 </div>
             </div>
         );
     };
-    return <div className="courses-list Python">{data.map(fill)}</div>;
+    return <div className="courses-list Python">{coursesData.map(fill)}</div>;
 }
 
 export default Card;

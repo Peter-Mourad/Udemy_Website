@@ -2,20 +2,18 @@ import React from "react"
 import Card from "../card/Card";
 import "../courses-section/coursesSectionStyle.css";
 
-function CardsContainer({data}) {
+const coursesData = require('../../db.json').courses_data.python_res;
+
+function CardsContainer() {
     return (
         <div className="courses-div">
             <div className="courses-intro">
-                <h2>Expand your career opportunities with Python</h2>
-                <p>Take one of Udemy’s range of Python courses and learn how to code using this incredibly useful language. Its simple
-                    syntax and readability makes Python perfect for Flask, Django, data science, and machine learning. You’ll learn how to
-                    build everything from games to sites to apps. Choose from a range of courses that will appeal to both beginners and
-                    advanced developers alike.
-                </p>
+                <h2> { coursesData.header } </h2>
+                <p> {coursesData.description} </p>
             </div>
             <div className="carousel-container">
                 <div className="carousel-inner">
-                    <Card data={data}></Card>
+                    <Card />
                 </div>
             </div>
         </div>

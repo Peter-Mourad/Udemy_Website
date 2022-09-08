@@ -40,10 +40,12 @@ li.active > a{
     padding-right: 20px;
     border: 1px solid black;
     width: 100%vh;
+    height: max-content;
 }
 
-.courses-intro{
-    white-space: pre-line;
+.courses-intro > p{
+    width: 70%;
+    padding-bottom: 10px;
 }
 
 .carousel-container{
@@ -52,12 +54,9 @@ li.active > a{
     position: relative;
 }
 
-.carousel-inner{
-    overflow: hidden;
-}
-
 .courses-list{
     display: flex;
+    flex-flow: row wrap;
     transition: transform 0.3s;
 }
 

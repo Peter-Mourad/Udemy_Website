@@ -3,7 +3,7 @@ import React from "react";
 import "./coursesSectionStyle.css";
 import CardsContainer from "../cards-container/CardsContainer";
 
-const CoursesSection = ({ data }) => {
+const CoursesSection = () => {
     return (
         <div className="courses-section">
             <h1>A broad selection of courses</h1>
@@ -31,7 +31,7 @@ const CoursesSection = ({ data }) => {
                     <a className="nav-link" href="/">Drawing</a>
                 </li>
             </ul>
-            <CardsContainer data = { data }/>
+            <CardsContainer/>
         </div>
     );
 }

@@ -1,0 +1,47 @@
+.course-body{
+    padding-left: 20%;
+    padding-top: 20px;
+    padding-right: 20px;
+    width: 600px;
+}
+
+.list-items > li{
+    list-style: none;
+}
+
+.course-content > span{
+    padding-right: 15px;
+    font-size: 16px;
+}
+
+.what-you-will-learn{
+    border: 1px solid rgb(176, 169, 169);
+    padding: 20px;
+}
+
+.list-items{
+    display: flex;
+    overflow-x: hidden;
+}
+
+.list-items > li > *{
+    padding-right: 10px;
+}
+
+.content-container{
+    border: 1px solid rgb(176, 169, 169);
+    margin-top: 8px;
+}
+
+.accordion-summary{
+    width: 100%;
+    text-align: left;
+    padding-left: 30px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.accordion-details-list > li{
+    font-size: 16px;
+    padding-bottom: 15px;
+}

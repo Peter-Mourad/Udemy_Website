@@ -4,8 +4,7 @@ import { CoursesContext } from "../../contexts/coursesContext";
 import "./sidebarStyle.css";
 
 function SidebarContainer() {
-    const data = useContext(CoursesContext);
-    console.log(data);
+    // const data = useContext(CoursesContext);    
     
     return (
         <div className="sidebar-container">

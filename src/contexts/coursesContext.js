@@ -6,7 +6,7 @@ function CoursesContextProvider({ children }) {
   const [data, setData] = useState([]);
   useEffect(() => {
     async function fetchData() {
-        const res = await fetch('http://localhost:8000/data');
+        const res = await fetch('http://localhost:8000/courses_data');
         const json = await res.json();
         setData(json);
     }
