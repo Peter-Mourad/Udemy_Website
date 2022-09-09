@@ -1,8 +1,23 @@
-import React from "react";
+import React, {useContext} from "react";
+import { useParams } from "react-router-dom";
+import { CoursesContext } from "../../contexts/coursesContext";
+import RateHtmlFormatting from "../../RateFormatting";
 
 import "./topContainer.css";
 
 function TopContainer() {
+    const { ID } = useParams();
+    const id = parseInt(ID);
+    const data = useContext(CoursesContext);
+    const coursesData = data.coursesData["python_res"]["items"];
+    let courseData;
+    for (let course in coursesData) {
+        if (coursesData[course]["id"] === id) {
+            courseData = coursesData[course];
+            break;
+        }
+    }
+
     return (
         <div className="top-container">
             <div className="topic-menu">
@@ -11,22 +26,16 @@ function TopContainer() {
                 <a href="https://www.udemy.com/topic/python/"> Python</a>
             </div>
             <div className="header">
-                <h1>Learn Python: The Complete Python Programming Course</h1>
-                <p>Learn A-Z everything about Python, from the basics, to advanced topics like Python GUI, Python Data Analysis, and more!</p>
+                <h1>{ courseData.title }</h1>
+                <p>{ courseData.headline }</p>
                 <span className="inline">
                     <a className="rate-section" href="https://www.udemy.com/course/pythonforbeginners/#reviews" target={"blank"}>
-                        <span className="rate">4.4</span>
-                        <span>
-                            <i className="fa fa-star" />
-                            <i className="fa fa-star" />
-                            <i className="fa fa-star" />
-                            <i className="fa fa-star" />
-                            <i className="fa fa-star-half-full" />
-                        </span>
+                        <span dangerouslySetInnerHTML={{ __html: RateHtmlFormatting(courseData.rating) }} />
                         <span>(3,201 ratings)</span>
                     </a>
                     <span>19,442 students</span>
                 </span>
+                {/* todo: add instructors and last_update_date */}
                 <span className="inline">
                     <span>Created by</span>
                     <a href="https://www.udemy.com/course/pythonforbeginners/#instructor-1">Avinash Jain, </a>

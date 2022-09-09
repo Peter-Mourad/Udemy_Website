@@ -1,14 +1,26 @@
 import React, {useContext} from "react";
 import { CoursesContext } from "../../contexts/coursesContext";
+import { useParams } from "react-router-dom";
+
 
 import "./sidebarStyle.css";
 
 function SidebarContainer() {
-    // const data = useContext(CoursesContext);    
-    
+    const { ID } = useParams();
+    const id = parseInt(ID);
+    const data = useContext(CoursesContext);
+    const coursesData = data.coursesData["python_res"]["items"];
+    let courseData;
+    for (let course in coursesData) {
+        if (coursesData[course]["id"] === id) {
+            courseData = coursesData[course];
+            break;
+        }
+    }
+
     return (
         <div className="sidebar-container">
-            <img src="https://img-c.udemycdn.com/course/240x135/394676_ce3d_5.jpg" alt=""></img>
+            <img src={courseData.image_125_H} alt=""></img>
             <h2>E£679.99</h2>
             <button className="inverted-button">Add to Cart</button>
             <button>Buy now</button>
