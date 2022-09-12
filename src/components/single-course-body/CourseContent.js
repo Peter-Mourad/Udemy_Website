@@ -3,7 +3,7 @@ import React from "react";
 import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 import ExpandMoreIcon from "@mui/material/Icon";
 import { BsPlayCircleFill } from "react-icons/bs";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 
 import "./singleCourseBody.css";
 
@@ -14,17 +14,17 @@ const CourseContent = ({ courseContent, lectures, totalLength }) => {
                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>
                     <IoIosArrowDown />
                     <span className="accordion-summary">
-                        {Object.keys(item)}
+                        {item.title}
                     </span>
                 </AccordionSummary>
                 <AccordionDetails className="accordion-details-section">
                     <ul className="accordion-details-list">
                         {
-                            item[Object.keys(item)].map((content) => {
+                            item.items.map((content) => {
                                 return (
                                     <li>
                                         <span><BsPlayCircleFill /></span>
-                                        {content}
+                                        {content.title}
                                     </li>
                                 );
                             })
