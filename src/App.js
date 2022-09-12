@@ -8,13 +8,20 @@ import { CoursesContextProvider } from "./contexts/coursesContext";
 import "./globalStyle.css";
 
 function App() {
-  const [coursesData, setCoursesData] = useState();
+  const [summary, setSummary] = useState();
+  const [data, setData] = useState();
   const [reviews, setReviews] = useState();
 
-  const fetchCourses = async () => {
-    const res = await fetch(`http://localhost:8000/courses_data`);
+  const fetchSummary = async () => {
+    const res = await fetch(`http://localhost:8000/summary`);
     const json = await res.json();
-    setCoursesData(json);
+    setSummary(json);
+  };
+
+  const fetchData = async () => {
+    const res = await fetch(`http://localhost:8000/data`);
+    const json = await res.json();
+    setData(json);
   };
 
   const fetchReviews = async () => {
@@ -24,13 +31,14 @@ function App() {
   };
 
   useEffect(() => {
-    fetchCourses();
+    fetchSummary();
+    fetchData();
     fetchReviews();
   }, []);
 
-  if(coursesData && reviews){
+  if(summary && data && reviews){
     return (
-      <CoursesContextProvider value= {{ coursesData, reviews }}>
+      <CoursesContextProvider value= {{ summary, data, reviews }}>
         <div className="App">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
           <Routes>

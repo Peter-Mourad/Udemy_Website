@@ -1,6 +1,12 @@
 import React, {useContext} from "react";
 import { CoursesContext } from "../../contexts/coursesContext";
 import { useParams } from "react-router-dom";
+import { MdOndemandVideo } from "react-icons/md";
+import { AiOutlineFile } from "react-icons/ai";
+import { RiFolderDownloadLine } from "react-icons/ri";
+import { IoIosInfinite } from "react-icons/io";
+import { FaMobileAlt } from "react-icons/fa";
+import { GiTrophyCup } from "react-icons/gi";
 
 
 import "./sidebarStyle.css";
@@ -9,7 +15,8 @@ function SidebarContainer() {
     const { ID } = useParams();
     const id = parseInt(ID);
     const data = useContext(CoursesContext);
-    const coursesData = data.coursesData["python_res"]["items"];
+    
+    const coursesData = data.summary["python_res"]["items"];
     let courseData;
     for (let course in coursesData) {
         if (coursesData[course]["id"] === id) {
@@ -20,20 +27,37 @@ function SidebarContainer() {
 
     return (
         <div className="sidebar-container">
-            <img src={courseData.image_125_H} alt=""></img>
-            <h2>E£679.99</h2>
+            <img src={courseData["image_480x270"]} alt=""></img>
+            <h2>{(courseData["is_paid"] ? "E£679.99" : "E£0.0")}</h2>
             <button className="inverted-button">Add to Cart</button>
             <button>Buy now</button>
             <p className="description">30-Day Money-Back Guarantee</p>
             <div className="course-info">
                 <h5>This course includes:</h5>
-                {/* todo: add list icons */}
-                <li>14 hours on-demand video</li>
-                <li>1 article</li>
-                <li>3 downloadable resources</li>
-                <li>Full lifetime access</li>
-                <li>Access on mobile and TV</li>
-                <li>Certificate of completion</li>
+                <li>
+                    <span><MdOndemandVideo className="test"/></span>
+                    {courseData["content_info_short"]} hours on-demand video
+                </li>
+                <li>
+                    <span><AiOutlineFile /></span>
+                    1 article
+                </li>
+                <li>
+                    <span><RiFolderDownloadLine /></span>
+                    3 downloadable resources
+                </li>
+                <li>
+                    <span><IoIosInfinite /></span>
+                    Full lifetime access
+                </li>
+                <li>
+                    <span><FaMobileAlt /></span>
+                    Access on mobile and TV
+                </li>
+                <li>
+                    <span><GiTrophyCup /></span>
+                    Certificate of completion
+                </li>
                 <div className="options">
                     <button href="/">Share</button>
                     <button href="/">Gift this course</button>

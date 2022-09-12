@@ -1,21 +1,20 @@
-import React from "react";
-import RateHtmlFormatting from "../../RateFormatting";
-
-const coursesData = require('../../db.json').courses_data.python_res.items;
+import React, {useContext} from "react";
+import Rate from "../Rate";
+import { CoursesContext } from "../../contexts/coursesContext";
 
 function Card() {
+    const json = useContext(CoursesContext);
+
+    const coursesData = json.summary["python_res"]["items"];
 
     const fill = (course) => {
         return (
             <div className="card-container">
                 <div className="course-item">
                     <a href={`/course/${course.id}`}>
-                        <img src={course.image_125_H} alt=""></img>
+                        <img src={course.image_480x270} alt=""></img>
                         <p><strong>{course.title}</strong></p>
-                        <div className="rate-section"
-                            dangerouslySetInnerHTML={{ __html: RateHtmlFormatting(course.rating) }}
-                        >
-                        </div>
+                        <Rate rate={ course.rating } />
                         <p className="price">E£$699</p>
                     </a>
                 </div>
@@ -26,4 +25,3 @@ function Card() {
 }
 
 export default Card;
-

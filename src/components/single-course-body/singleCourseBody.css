@@ -1,5 +1,5 @@
 .course-body{
-    padding-left: 20%;
+    margin: auto;
     padding-top: 20px;
     padding-right: 20px;
     width: 600px;
@@ -21,11 +21,16 @@
 
 .list-items{
     display: flex;
-    overflow-x: hidden;
+    flex-flow: row wrap;
 }
 
-.list-items > li > *{
-    padding-right: 10px;
+.list-items > li > i{
+    padding-right: 5px;
+}
+
+.list-items > li{
+    width: 50%;
+    padding-bottom: 10px;
 }
 
 .content-container{
@@ -52,10 +57,67 @@
 
 .requirments > *{
     padding-top: 10px;
+    padding-bottom: 2px;
+    list-style: disc;
+    font-size: 16px;
 }
 
-.description-section li{
-    list-style-type: disc;
+.description-section button{
+    width: 20%;
+    height: 50px;
+    margin-top: 20px;
+    color: blueviolet;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.description-wrapper > p{
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.description-section > button > *{
+    padding-right: 10px;
+}
+
+.instructor-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.instructor-container > a{
+    color: blue;
+    font-size: larger;
+    text-decoration: underline;
+}
+
+.instructor-container > p{
+    color: grey;
+}
+
+.instructor-personal-data{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.achievments-data{
+    padding-top: 10px;
+}
+
+.achievments-data > *{
+    padding-bottom: 10px;
+}
+
+.instructor-personal-data > img{
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+}
+
+.instructor-description > *{
+    font-size: 15px;
+    color: rgb(76, 71, 71);
 }
 
 .reviews-control-section{
@@ -77,8 +139,9 @@
 
 .reviews-search-bar > form{
     width: 100%;
-    background-color: blue;
+    background-color: black;
 }
+
 .reviews-search-bar > form > *{
     height: 40px;
 }
@@ -105,7 +168,7 @@
     gap: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: red;
+    border-bottom: 1px solid rgb(168, 158, 158);
 }
 
 .user-icon-container{
@@ -124,8 +187,27 @@
     height: 40px;
 }
 
+.main-review-container div{
+    padding-bottom: 15px;
+}
 
+.main-review-container > p, .main-review-container > a{
+    margin-right: 20px;
+    font-size: smaller;
+    color: black;
+}
 
- .description-section{
-    display: none;
- }
+.main-review-container button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    justify-content: center;
+}
+
+.report-abuse button{
+    border: 1px solid;
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+}

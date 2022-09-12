@@ -2,7 +2,7 @@ import React from "react"
 import Card from "../card/Card";
 import "../courses-section/coursesSectionStyle.css";
 
-const coursesData = require('../../db.json').courses_data.python_res;
+const coursesData = require('../../db.json').summary.python_res;
 
 function CardsContainer() {
     return (
