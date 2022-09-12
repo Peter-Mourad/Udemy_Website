@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import { CoursesContext } from "../../contexts/coursesContext";
 import { useParams } from "react-router-dom";
 import { MdOndemandVideo } from "react-icons/md";
@@ -7,7 +7,6 @@ import { RiFolderDownloadLine } from "react-icons/ri";
 import { IoIosInfinite } from "react-icons/io";
 import { FaMobileAlt } from "react-icons/fa";
 import { GiTrophyCup } from "react-icons/gi";
-
 
 import "./sidebarStyle.css";
 
@@ -25,9 +24,15 @@ function SidebarContainer() {
         }
     }
 
+    const [fix, setFix] = useState();
+    window.addEventListener('scroll', () => {
+        (window.scrollY >= 300 ? setFix(true) : setFix(false));
+        console.log(fix);
+    });
+
     return (
-        <div className="sidebar-container">
-            <img src={courseData["image_480x270"]} alt=""></img>
+        <div className={(fix) ? "sidebar-container fix" : "sidebar-container unfix"}>
+            <img src={courseData["image_480x270"]} alt="" className={!fix ? "show-img" : "hide-img"} />
             <h2>{(courseData["is_paid"] ? "E£679.99" : "E£0.0")}</h2>
             <button className="inverted-button">Add to Cart</button>
             <button>Buy now</button>
