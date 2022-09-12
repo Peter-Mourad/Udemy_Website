@@ -38,7 +38,7 @@ function TopContainer() {
                     <span className="inline">
                         <a className="rate-section" href="https://www.udemy.com/course/pythonforbeginners/#reviews" target={"blank"}>
                             <span >
-                                <Rate rate={courseData.rating} />
+                                <Rate rate={courseData.rating} showRate={1} />
                             </span>
                             <span>(3,201 ratings)</span>
                         </a>
