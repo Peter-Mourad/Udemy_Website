@@ -14,7 +14,7 @@ function Card() {
                     <a href={`/course/${course.id}`}>
                         <img src={course.image_480x270} alt=""></img>
                         <p><strong>{course.title}</strong></p>
-                        <Rate rate={ course.rating } />
+                        <Rate rate={course.rating} showRate={ 1 } />
                         <p className="price">E£$699</p>
                     </a>
                 </div>
