@@ -3,8 +3,7 @@ import React from "react";
 import Header from "../components/header/Header";
 import NavigationBar from '../components/navbar/NavigationBar';
 import CoursesSection from "../components/courses-section/CoursesSection";
-
-import { CoursesContextConsumer } from "../contexts/coursesContext";
+import Footer from "../components/footer/Footer";
 
 import "../globalStyle.css";
     
@@ -14,6 +13,7 @@ function Home() {
             <NavigationBar />
             <Header />
             <CoursesSection />
+            <Footer />
         </>
     );
 }
