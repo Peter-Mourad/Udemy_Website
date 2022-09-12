@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+
 import Rate from "../../components/Rate";
+
 import { MdOutlineSearch } from "react-icons/md";
 import { FaRegThumbsUp, FaRegThumbsDown } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
@@ -7,6 +9,12 @@ import { useParams } from "react-router-dom";
 
 function Reviews({ reviews }) {
     const { ID } = useParams();
+
+    const [reviewsShown, setReviewsShown] = useState(5);
+    const toggleReviewsButton = () => {
+        setReviewsShown((reviewsShown === reviews.length ? 5 :
+            Math.min(reviewsShown + 5, reviews.length)));
+    };
     
     const fill = (review) => {
         const matches = review["user"]["title"].match(new RegExp(/\b(\w)/g));
@@ -49,8 +57,11 @@ function Reviews({ reviews }) {
                 </button>
             </div>
             <div className="reviews-container">
-                {reviews.map(fill)}
+                {reviews.slice(0, reviewsShown).map(fill)}
             </div>
+            {(reviews.length > 5) ? <button onClick={toggleReviewsButton}>
+                <span>{(reviewsShown === reviews.length) ? "See less reviews" : "See more reviews"}</span>
+            </button> : ''}
         </div>
     );
 }
