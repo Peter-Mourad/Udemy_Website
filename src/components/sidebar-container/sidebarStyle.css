@@ -1,12 +1,29 @@
 .sidebar-container{
+    margin: auto;
     border: 1px solid black;
     width: 320px;
-    position: absolute;
     display: flex;
     flex-direction: column;
     margin-left: 70%;
-    margin-top: 25px;
     background-color: white;
+}
+
+.fix{
+    margin-top: 0%;
+    position: fixed;
+}
+
+.unfix{
+    margin-top: 25px;
+    position: absolute;
+}
+
+.hide-img{
+    display: none;
+}
+
+.show-img{
+    display: block;
 }
 
 .sidebar-container :not(img){
