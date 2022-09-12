@@ -1,71 +1,15 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
+import { useParams } from "react-router-dom";
 
 import CourseContent from "./CourseContent";
 import Requirements from "./Requirments";
 import Description from "./Description";
+import Instructors from "./Instructors";
+import Reviews from "./Reviews";
 
-import { useParams } from "react-router-dom";
-import RateHtmlFormatting from "../../RateFormatting";
 import { CoursesContext } from "../../contexts/coursesContext";
-import { FaRegThumbsUp, FaRegThumbsDown } from "react-icons/fa";
 
 import "./singleCourseBody.css";
-
-const reviewsHTMLFormatting = (courseReviews) => {
-    let html = ``;
-    for (const key in courseReviews) {
-        let review = courseReviews[key];
-        html += `<div class="review-container" id="${review["id"]}">\n`;
-        
-        // html for user-icon-container
-        html += `\t<div class="user-icon container">\n`;
-        const matches = review["user"]["title"].match(new RegExp(/\b(\w)/g));
-        const userIconName = matches[0] + (matches.length > 1 ? matches[1] : '');
-        html += `\t\t<button class="user-icon">
-            ${userIconName}
-        </button>\n`;
-        html += `\t</div>\n`;
-
-        // html for main review container
-        html += `\t<div class="main-review-container">\n`;
-        html += `<div>${review["user"]["title"]}</div>`;
-        html += RateHtmlFormatting(review["rating"]);
-        html += `<p>${review["content"]}</p>\n
-        <p>Was this review helpful?</p>\n
-        <button> <FaRegThumbsUp /> </button>\n
-        <button> <FaRegThumbsDown /> </button>\n
-        <a href=""> Report</a>\n`;
-        html += `\t</div>\n`;
-
-        html += `</div>\n`;
-    }
-    return html;
-};
-
-const instructorsHTMLFormatting = (instructors) => {
-    let html = ``;
-    for (let i = 0; i < instructors.length; i++) {
-        html += `<div class="instructor-container">\n`;
-        html += `<a>${instructors[i]["display_name"]}</a>\n
-        <p>${ instructors[i]["job_title"]}</p>\n`;
-
-        html += `<div class="instructor-personal-data">\n
-            <img src="${instructors[i]["image_100x100"]}" alt="instructor image" />\n
-            <div class="achievments-data">\n
-                <div>${instructors[i]["rating"]} Instructor Rating</div>\n
-                <div>${instructors[i]["reviews"]} Reviews</div>\n
-                <div>${instructors[i]["students"]} Students</div>\n
-                <div>${instructors[i]["courses"]} Courses</div>\n
-            </div>\n
-        </div>\n`;
-
-        html += `<div class="instructor-description">\n
-            <p>${ instructors[i]["description"]}</p>\n
-        </div>\n`;
-        html += `</div>\n`;
-    }
-    return html;
-};
 
 function SingleCourseBody() {
     const { ID } = useParams();
@@ -92,14 +36,7 @@ function SingleCourseBody() {
     }
 
     const courseReviews = json.reviews[ID]["results"];
-
-    // showMore buttons toggle functions
-    // const [isReviewsShowMore, setReviewsShowMore] = useState(false);
-
-    // const toggleReviewsButton = () => {
-    //     setReviewsShowMore(!isReviewsShowMore);
-    // };
-
+    
     return (
         <>
             <div className="course-body">
@@ -131,32 +68,9 @@ function SingleCourseBody() {
 
                 <Description details={data.details} />
 
-                <div className="instructors-section">
-                    <h2>Instructors</h2>
-                    <div className="instructors-container"
-                        dangerouslySetInnerHTML={{ __html: instructorsHTMLFormatting(courseData["visible_instructors"])}}    
-                    >
-                    </div>
-                </div>
+                <Instructors instructors={courseData["visible_instructors"]} />
 
-                <div className="reviews-section">
-                    <h2>Reviews</h2>
-                    <div className="reviews-control-section">
-                        <div className="reviews-search-bar">
-                            <form>
-                                <input type="text" placeholder="search reviews"></input>
-                                <button type={"submit"}>
-                                    search
-                                </button>
-                            </form>
-                        </div>
-                        <button> All ratings</button>
-                    </div>
-                    <div className="reviews-container"
-                        dangerouslySetInnerHTML={{ __html: reviewsHTMLFormatting(courseReviews) }}
-                    >
-                    </div>
-                </div>
+                <Reviews reviews={ courseReviews }/>
 
                 <div className="report-abuse">
                     <button>Report abuse</button>
