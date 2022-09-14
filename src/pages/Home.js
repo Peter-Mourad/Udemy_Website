@@ -15,7 +15,7 @@ function Home() {
         <>
             <NavigationBar />
             <Header />
-            <CoursesSection searchText={ courseName } />
+            <CoursesSection searchText={ courseName || ''} />
             <Footer />
         </>
     );

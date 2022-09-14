@@ -10,6 +10,10 @@ function CardsContainer({ searchText }) {
     const json = useContext(CoursesContext);
     const coursesData = json.summary.python_res;
 
+    const filteredCourses = coursesData.items.filter((course) => 
+        course.title.toLowerCase().includes(searchText.toLowerCase())
+    );
+
     return (
         <div className="courses-div">
             <div className="courses-intro">
@@ -18,7 +22,11 @@ function CardsContainer({ searchText }) {
             </div>
             <div className="carousel-container">
                 <div className="carousel-inner">
-                    <Card searchText={searchText} />
+                    <div className="courses-list Python">
+                        {filteredCourses.map((course, index) => {
+                            return <Card key={index} course={course} />
+                        })}
+                    </div>
                 </div>
             </div>
         </div>
