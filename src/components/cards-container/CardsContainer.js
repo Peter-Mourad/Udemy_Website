@@ -1,23 +1,28 @@
-import React from "react"
+import React, { useContext } from "react";
+
 import Card from "../card/Card";
+
+import { CoursesContext } from "../../contexts/coursesContext";
+
 import "../courses-section/coursesSectionStyle.css";
 
-const coursesData = require('../../db.json').summary.python_res;
+function CardsContainer({ searchText }) {
+    const json = useContext(CoursesContext);
+    const coursesData = json.summary.python_res;
 
-function CardsContainer() {
     return (
         <div className="courses-div">
             <div className="courses-intro">
-                <h2> { coursesData.header } </h2>
+                <h2> {coursesData.header} </h2>
                 <p> {coursesData.description} </p>
             </div>
             <div className="carousel-container">
                 <div className="carousel-inner">
-                    <Card />
+                    <Card searchText={searchText} />
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default CardsContainer;

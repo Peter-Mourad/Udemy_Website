@@ -1,9 +1,10 @@
 import React from "react";
 
-import "./coursesSectionStyle.css";
 import CardsContainer from "../cards-container/CardsContainer";
 
-const CoursesSection = () => {
+import "./coursesSectionStyle.css";
+
+const CoursesSection = ({searchText}) => {
     return (
         <div className="courses-section">
             <h1>A broad selection of courses</h1>
@@ -31,7 +32,7 @@ const CoursesSection = () => {
                     <a className="nav-link" href="/">Drawing</a>
                 </li>
             </ul>
-            <CardsContainer/>
+            <CardsContainer searchText={ searchText } />
         </div>
     );
 }
