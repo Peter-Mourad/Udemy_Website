@@ -43,6 +43,7 @@ function App() {
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
           <Routes>
             <Route exact path="/" element={<Home />} />
+            <Route exact path="/search/:courseName" element={<Home />} />
             <Route exact path="/course/:ID" element={<SingleCourse />} />
           </Routes>
         </div>
