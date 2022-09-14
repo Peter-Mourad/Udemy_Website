@@ -9,7 +9,8 @@ function Card({searchText}) {
     const coursesData = json.summary["python_res"]["items"];
 
     const fill = (course) => {
-        if (searchText && course.title.toLowerCase().includes(searchText.toLowerCase())) {
+        if ((searchText && course.title.toLowerCase().includes(searchText.toLowerCase()))
+        || !searchText) {
             return (
                 <div className="card-container">
                     <div className="course-item">
