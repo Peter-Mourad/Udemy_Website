@@ -26,8 +26,7 @@ function SidebarContainer() {
 
     const [fix, setFix] = useState();
     window.addEventListener('scroll', () => {
-        (window.scrollY >= 300 ? setFix(true) : setFix(false));
-        console.log(fix);
+        (window.scrollY >= 320 ? setFix(true) : setFix(false));
     });
 
     return (
