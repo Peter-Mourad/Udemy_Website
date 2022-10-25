@@ -1,39 +1,36 @@
 import React from "react";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Popover from "react-bootstrap/Popover";
 
-function RateHtmlFormatting(rate){
-    let html = `<span class="rate"><strong>${rate}</strong></span>\n`;
-    for (let i = 0; i < 5; i++, rate--){
-        if (rate >= 1) 
-            html += `\t\t\t\t\t\t\t<i class="fa fa-star"></i>\n`;
-        else if (rate > 0) 
-            html += `\t\t\t\t\t\t\t<i class="fa fa-star-half-full"></i>\n`;
-        else
-            html += `<i class="fa fa-star-o"></i>\n`;
-    }
-    return html;
-}
+import PopoverCard from "../popover/PopoverCard";
+import Rate from "../Rate";
 
-function Card({ data }) {
-    const fill = (course) => {
-        return (
+function Card({ course, id }) {
+    let key = 0;
+    const popover = (props) => (
+        <Popover {...props}>
+            <PopoverCard key={key++} summary={course} />
+        </Popover>
+    );
+    return (
+        <OverlayTrigger
+            className="tippycard"
+            overlay={popover}
+            placement="top-end"
+            trigger={["hover", "hover"]}
+        >
             <div className="card-container">
                 <div className="course-item">
-                    <a href={course.link}>
-                        <img src={course.image} alt=""></img>
+                    <a href={`/course/${course.id}`}>
+                        <img src={course.image_480x270} alt="course pic"></img>
                         <p><strong>{course.title}</strong></p>
-                        <p className="author">{course.author}</p>
-                        <div className="rate-section"
-                            dangerouslySetInnerHTML={{ __html: RateHtmlFormatting(course.rate) }}
-                        >
-                        </div>
-                        <p className="price">E£${course.price}</p>
+                        <Rate key={ id } rate={course.rating} showRate={1} />
+                        <p className="price">E£$699</p>
                     </a>
                 </div>
             </div>
-        );
-    };
-    return <div className="courses-list Python">{data.map(fill)}</div>;
+        </OverlayTrigger>
+    );
 }
 
 export default Card;
-

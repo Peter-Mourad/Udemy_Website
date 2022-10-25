@@ -1,0 +1,22 @@
+.header {
+    height: 400px;
+    margin-top: 20px;
+    margin-left: 7%;
+    margin-right: 7%;
+    position: relative;
+}
+
+.intro {
+    position: absolute;
+    border: 5px solid white;
+    background-color: white;
+    text-align: center;
+    width: 20%;
+    margin-top: 50px;
+    margin-left: 60px;
+}
+
+.header > img {
+    height: 100%;
+    width: 100%;
+}

@@ -1,27 +1,36 @@
-import React from "react"
-import Card from "../card/Card";
-import "./cardsContainerStyle.css";
+import React, { useContext } from "react";
 
-function CardsContainer({data}) {
+import Card from "../card/Card";
+
+import { CoursesContext } from "../../contexts/coursesContext";
+
+import "../courses-section/coursesSectionStyle.css";
+
+function CardsContainer({ searchText }) {
+    const json = useContext(CoursesContext);
+    const coursesData = json.summary.python_res;
+
+    const filteredCourses = coursesData.items.filter((course) => 
+        course.title.toLowerCase().includes(searchText.toLowerCase())
+    );
+
     return (
-        <div className="courses-section">
-            <div className="courses-div">
-                <div className="courses-intro">
-                    <h2>Expand your career opportunities with Python</h2>
-                    <p>Take one of Udemy’s range of Python courses and learn how to code using this incredibly useful language. Its simple
-                        syntax and readability makes Python perfect for Flask, Django, data science, and machine learning. You’ll learn how to
-                        build everything from games to sites to apps. Choose from a range of courses that will appeal to both beginners and
-                        advanced developers alike.
-                    </p>
-                </div>
-                <div className="carousel-container">
-                    <div className="carousel-inner">
-                        <Card data={data}></Card>
+        <div className="courses-div">
+            <div className="courses-intro">
+                <h2> {coursesData.header} </h2>
+                <p> {coursesData.description} </p>
+            </div>
+            <div className="carousel-container">
+                <div className="carousel-inner">
+                    <div className="courses-list Python">
+                        {filteredCourses.map((course, index) => {
+                            return <Card key={index} course={course} />
+                        })}
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default CardsContainer;

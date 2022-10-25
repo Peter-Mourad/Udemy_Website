@@ -1,0 +1,101 @@
+.footer-section{
+    background-color: #1c1d1f;
+    height: fit-content;
+    margin-top: 80px;
+}
+
+.footer-section{
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.partners-section{
+    border-bottom: 1px solid rgb(84, 81, 81);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.partners-section-intro{
+    padding-top: 40px;
+    width: max-content;
+}
+
+.partners-section-intro > *{
+    font-weight: bolder;
+    padding-right: 5px;
+    font-size: 20px;
+}
+
+.partners-section-intro > span{
+    color: white;
+}
+
+.partners-logos{
+    display: flex;
+    gap: 15px;
+    padding-right: 20px;
+}
+
+.partners-logos > img{
+    height: 100%;
+    width: 80px;
+}
+
+.footer-main-section{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links-container{
+    width: 75%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer-links-container > div{
+    width: 25%;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-links-container > div > a{
+    color: white;
+    text-decoration: none;
+    font-size: small;
+}
+
+.footer-links-container > div > a:hover{
+    text-decoration: underline;
+}
+
+.language-button > button{
+    margin-right: 40px;
+    padding: 5px 35px 5px 25px;
+    font-size: large;
+    width: fit-content;
+    color: white;
+    border: 2px solid white;
+}
+
+.language-button > button > .language-icon{
+    margin-right: 20px;
+}
+
+.logo-and-copyright{
+    padding-top: 30px;
+    padding-bottom: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright-div{
+    color: white;
+    padding-right: 50px;
+}
+
+.logo-and-copyright img{
+    height: 40px;
+}

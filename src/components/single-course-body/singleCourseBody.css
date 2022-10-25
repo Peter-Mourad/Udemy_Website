@@ -1,0 +1,232 @@
+.course-body{
+    margin: auto;
+    padding-top: 20px;
+    padding-right: 20px;
+    width: 600px;
+}
+
+.list-items > li{
+    list-style: none;
+}
+
+.course-content > span{
+    padding-right: 15px;
+    font-size: 16px;
+}
+
+.what-you-will-learn{
+    border: 1px solid rgb(176, 169, 169);
+    padding: 20px;
+}
+
+.list-items{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.list-items > li > i{
+    padding-right: 5px;
+}
+
+.list-items > li{
+    width: 50%;
+    padding-bottom: 10px;
+}
+
+.content-container{
+    border: 1px solid rgb(176, 169, 169);
+    margin-top: 8px;
+}
+
+.accordion-summary{
+    width: 100%;
+    text-align: left;
+    padding-left: 30px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.accordion-details-list{
+    padding: 0%;
+}
+
+.accordion-details-list > li{
+    font-size: 16px;
+    padding-bottom: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.requirments-section{
+    padding-top: 15px;
+}
+
+.requirments > *{
+    padding-top: 10px;
+    padding-bottom: 2px;
+    list-style: disc;
+    font-size: 16px;
+}
+
+.description-section button{
+    width: 20%;
+    height: 50px;
+    margin-top: 20px;
+    color: blueviolet;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.description-wrapper > p{
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+.description-section > button > *{
+    padding-right: 10px;
+}
+
+.instructor-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.instructor-container > a{
+    color: blue;
+    font-size: larger;
+    text-decoration: underline;
+}
+
+.instructor-container > p{
+    color: grey;
+}
+
+.instructor-personal-data{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.achievments-data{
+    padding-top: 10px;
+}
+
+.achievments-data > *{
+    padding-bottom: 10px;
+}
+
+.instructor-personal-data > img{
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+}
+
+.instructor-description > *{
+    font-size: 15px;
+    color: rgb(76, 71, 71);
+}
+
+.reviews-section > button{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    border-top: none;
+}
+
+.reviews-control-section{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.reviews-control-section > button{
+    border: 1px solid;
+    width: 200px;
+}
+
+.reviews-control-section > button > *{
+    padding-right: 10px;
+}
+
+.reviews-search-bar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.reviews-search-bar > form{
+    width: 100%;
+    background-color: black;
+}
+
+.reviews-search-bar > form > *{
+    height: 40px;
+}
+
+.reviews-search-bar > form > input{
+    width: 86%;
+}
+
+.reviews-search-bar > form > button{
+    width: 12%;
+    color: white;
+}
+
+
+.reviews-container{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+
+.review-container{
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(168, 158, 158);
+}
+
+.user-icon-container{
+    justify-items: center;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.user-icon{
+    display: inline;
+    background-color: black;
+    height: 100px;
+    border-radius: 50%;
+    color: white;
+    width: 40px;
+    height: 40px;
+}
+
+.main-review-container div{
+    padding-bottom: 15px;
+}
+
+.main-review-container > p, .main-review-container > a{
+    margin-right: 20px;
+    font-size: smaller;
+    color: black;
+}
+
+.main-review-container button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid;
+    margin-right: 5px;
+    justify-content: center;
+}
+
+.report-abuse button{
+    border: 1px solid;
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+}
